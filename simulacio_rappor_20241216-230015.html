@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulació RAPPOR i Bloom Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .parameter {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .grafiques-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px; /* Separació entre les gràfiques */
+            flex-wrap: wrap; /* Permet ajustar si la pantalla és petita */
+            margin-top: 30px;
+        }
+        .grafica {
+            width: 45%; /* Cada gràfica ocupa el 45% de l'espai disponible */
+        }
+        img {
+            width: 100%;
+            height: auto; /* Ajusta l'altura automàticament */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .parametros {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulació del Protocol RAPPOR i Bloom Filter</h1>
+    <div class="parametros">
+        <h2>Paràmetres Utilitzats:</h2>
+        <div class="parameter">Número de clients: 100</div>
+        <div class="parameter">Número de bits en el Bloom Filter: 16</div>
+        <div class="parameter">Número de funcions hash: 2</div>
+        <div class="parameter">Probabilitat de flip (p): 0.5</div>
+        <div class="parameter">Probabilitat de mantenir el bit (q): 0.75</div>
+        <div class="parameter">Probabilitat de soroll aleatori (f): 0.5</div>
+    </div>
+    <div class="grafiques-container">
+        <div class="grafica">
+            <h2>Distribució de bits en el Bloom Filter (amb RAPPOR)</h2>
+            <img src="bloom_rappor_20241216-230015.png" alt="Distribució de bits amb RAPPOR">
+        </div>
+        <div class="grafica">
+            <h2>Distribució de bits en el Bloom Filter (Sense RAPPOR)</h2>
+            <img src="bloom_sin_rappor_20241216-230015.png" alt="Distribució de bits sense RAPPOR">
+        </div>
+    </div>
+</body>
+</html>
